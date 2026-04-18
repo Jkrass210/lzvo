@@ -1,0 +1,36 @@
+.box-logo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__link {
+    position: relative;
+    display: flex;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      border-radius: 10px;
+      opacity: 0;
+      border: 1px solid var(--green);
+      transition: opacity 0.4s ease-in-out;
+    }
+    img {
+      width: 201px;
+      height: 80px;
+      @media (max-width: 1000px) {
+        width: 161px;
+        height: 64px;
+      }
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    @media (min-width: 1001px) {
+      &:focus-visible {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

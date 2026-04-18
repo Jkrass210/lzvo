@@ -1,0 +1,40 @@
+.modal-search {
+  &__window {
+    max-width: 100%;
+    width: 1364px;
+    height: 100%;
+
+    @media (max-width: 1650px) {
+      margin-top: 70px;
+    }
+
+    .input-type-search {
+      border-radius: 20px;
+      background-color: var(--black-5, #232323);
+
+      @media (max-width: 1000px) {
+        background-image: none;
+      }
+
+      &__input {
+        height: 64px;
+        @media (max-width: 1200px) {
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  &__line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.modal__body {
+  &:has(.modal-search__window) {
+    margin: 0 0 auto 0;
+  }
+}

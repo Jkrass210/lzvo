@@ -1,0 +1,19 @@
+.box-career {
+  &__content {
+    display: flex;
+    gap: 24px;
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      gap: 28px;
+    }
+    &-left {
+      width: calc(670 / 1364 * 100%);
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
+    }
+    &-right {
+      flex: 1;
+    }
+  }
+}

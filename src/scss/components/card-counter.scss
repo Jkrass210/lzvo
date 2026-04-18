@@ -1,0 +1,74 @@
+.card-counter {
+  display: flex;
+
+  &.more {
+    .counter__number {
+      padding-left: 31px;
+      background-image: url("../img/card-counter/bg.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      @media (max-width: 1200px) {
+        padding-left: 49px;
+        background-image: url("../img/card-counter/bg-1200.svg");
+      }
+      @media (max-width: 1000px) {
+        padding-left: 31px;
+        background-image: url("../img/card-counter/bg.svg");
+      }
+    }
+  }
+
+  .counter {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &__number {
+      color: var(--green, #00CB62);
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      @media (max-width: 1200px) {
+        font-size: 84px;
+      }
+
+      @media (max-width: 1000px) {
+        font-size: 52px;
+      }
+
+      &.hide {
+        opacity: 0;
+      }
+
+      &.number {
+        position: absolute;
+      }
+
+      span {
+        margin-left: 10px;
+        color: var(--green, #00CB62);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+
+    &__desc {
+      color: var(--white, #FFF);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+      @media (max-width: 1000px) {
+        max-width: 310px;
+        font-size: 18px;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}

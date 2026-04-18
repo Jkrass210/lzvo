@@ -1,0 +1,13 @@
+.swiper-visual {
+  overflow: visible;
+  .swiper-slide {
+    height: auto;
+  }
+  &__line-nav {
+    padding-top: 20px;
+    margin: 0 -146px;
+    @media (max-width: 1400px) {
+      margin: 0;
+    }
+  }
+}

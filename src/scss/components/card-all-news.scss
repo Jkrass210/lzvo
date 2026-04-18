@@ -1,0 +1,89 @@
+.card-all-news {
+  position: sticky;
+  top: 140px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 20px;
+  background-color: var(--black-10, #191919);
+  @media (max-width: 1200px) and (min-width: 1001px) {
+    position: static;
+    top: auto;
+    flex-direction: row;
+    gap: 20px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1200px) and (min-width: 1001px) {
+      flex-direction: row;
+    }
+    li {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--black-5, #232323);
+      @media (max-width: 1200px) and (min-width: 1001px) {
+        flex: 1;
+        padding: 0 20px;
+        border-right: 1px solid var(--black-5, #232323);
+        border-bottom: 0;
+      }
+      &:first-child {
+        padding-top: 0;
+        @media (max-width: 1200px) and (min-width: 1001px) {
+          padding-left: 0;
+        }
+      }
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+        @media (max-width: 1200px) and (min-width: 1001px) {
+          padding-right: 0;
+          border-right: 0;
+        }
+        
+      }
+    }
+  }
+  &__link {
+    padding: 5px 24px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 141.176%;
+    background-color: var(--black-20, #141414);
+    transition: background-color 0.4s ease-in-out;
+    @media (max-width: 1200px) {
+      padding: 24px 24px 12px 24px;
+      width: 202px;
+      flex-shrink: 0;
+      height: auto;
+      align-items: start;
+      flex-direction: column;
+    }
+    @media (max-width: 1000px) {
+      padding: 14px 24px;
+      width: 100%;
+      flex-direction: row;
+    }
+    .svg {
+      color: var(--green);
+      transition: color 0.4s ease-in-out;
+    }
+    @media (min-width: 1001px) {
+      &:focus-visible,&:hover {
+        background-color: var(--green);
+        .svg {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}

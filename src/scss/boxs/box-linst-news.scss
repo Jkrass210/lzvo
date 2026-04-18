@@ -1,0 +1,22 @@
+.box-linst-news {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1000px) {
+      max-width: 450px;
+      margin: 0 auto;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

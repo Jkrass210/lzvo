@@ -1,0 +1,31 @@
+.link-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--white, #FFF);
+  font-family: var(--font-family);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.44px;
+  transition: color 0.4s ease-in-out;
+  @media (min-width: 1001px) {
+    &:focus-visible, &:hover {
+      color: var(--green);
+    }
+  }
+  @media (max-width: 1000px) {
+    font-size: 20px;
+  }
+  &::after {
+    content: '';
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    background-image: url("../img/link-media/arr.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}

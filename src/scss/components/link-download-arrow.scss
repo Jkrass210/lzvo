@@ -1,0 +1,42 @@
+.link-download-arrow {
+  max-width: 100%;
+  min-width: 268px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #FFF;
+  font-family: var(--font-family);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.176%;
+  padding: 5px 24px;
+  height: 56px;
+  border-radius: 14px;
+  background-color: var(--black-20, #141414);
+  transition: background-color 0.4s ease-in-out;
+  @media (max-width: 1200px) {
+    font-size: 16px;
+    padding: 5px 16px;
+    min-width: 248px;
+    height: 52px;
+  }
+  @media (max-width: 1000px) {
+    font-size: 15px;
+    min-width: 100%;
+  }
+  .svg {
+    display: flex;
+    color: var(--green);
+    transition: color 0.4s ease-in-out;
+  }
+  @media (min-width: 1001px) {
+    &:focus-visible,&:hover {
+      background-color: var(--green);
+      .svg {
+        color: var(--white);
+      }
+    }
+  }
+}

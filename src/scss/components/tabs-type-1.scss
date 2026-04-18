@@ -1,0 +1,119 @@
+.tabs-type-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__tab {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    padding: 28px;
+    border-radius: 20px;
+    color: #FFF;
+    font-family: var(--font-famil);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black-10, #191919);
+
+    @media (max-width: 1000px) {
+      padding: 16px;
+      font-size: 17px;
+    }
+
+    .name {
+      text-align: start;
+    }
+
+    .svg {
+      position: relative;
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background-color: var(--green, #00CB62);
+
+      @media (max-width: 1000px) {
+        width: 32px;
+        height: 32px;
+      }
+
+      svg {
+        position: absolute;
+        transition: opacity 0.4s ease-in-out;
+
+        &.tabClose {
+          opacity: 0;
+        }
+      }
+    }
+
+    &.active {
+      background: var(--black-5, #232323);
+      border-radius: 20px 20px 0 0;
+
+      .svg {
+        svg {
+          &.svgPlus {
+            opacity: 0;
+          }
+
+          &.tabClose {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1001px) {
+      &:focus-visible,
+      &:hover {
+        background: var(--black-5, #232323);
+      }
+    }
+  }
+
+  &__info {
+    display: none;
+    gap: 36px;
+    flex-direction: column;
+    padding: 0 28px 28px 28px;
+    background-color: var(--black-5, #232323);
+
+    @media (max-width: 1000px) {
+      padding: 0 16px 16px 16px;
+    }
+
+    &.active {
+      display: flex;
+    }
+
+    &_top {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      @media (max-width: 1000px) {
+        gap: 12px;
+      }
+    }
+
+    &_middle {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      @media (max-width: 1000px) {
+        gap: 20px;
+      }
+    }
+  }
+}

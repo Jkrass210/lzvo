@@ -1,0 +1,29 @@
+.block-title {
+  margin-bottom: 18px;
+  @media (max-width: 1200px) {
+    margin-bottom: 16px;
+  }
+  @media (max-width: 1000px) {
+    margin-bottom: 12px;
+  }
+  &__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  &__name {
+    color: var(--white, #FFF);
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @media (max-width: 1200px) {
+      font-size: 28px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 22px;
+    }
+  }
+}

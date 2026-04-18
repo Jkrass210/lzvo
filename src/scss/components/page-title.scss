@@ -1,0 +1,25 @@
+.page-title {
+  margin-bottom: 28px;
+  @media (max-width: 1000px) {
+    margin-bottom: 24px;
+  }
+  &__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__name {
+    color: var(--white, #FFF);
+    font-family: var(--font-family);
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @media (max-width: 1200px) {
+      font-size: 36px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 28px;
+    }
+  }
+}

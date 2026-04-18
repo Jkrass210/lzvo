@@ -1,0 +1,18 @@
+.section-background {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 602px;
+    height: 614px;
+    background-image: url('../img/section-background/bg.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+}

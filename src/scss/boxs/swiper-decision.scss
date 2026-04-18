@@ -1,0 +1,22 @@
+.swiper-decision {
+  overflow: visible;
+  .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+
+    .card-decision {
+      background-color: #1F1F1F;
+    }
+    &.swiper-slide-active {
+      .card-decision {
+        background-color: var(--black-10, #191919);
+      }
+    }
+  }
+  &__line-nav {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

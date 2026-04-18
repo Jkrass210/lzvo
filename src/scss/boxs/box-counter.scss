@@ -1,0 +1,36 @@
+.box-counter {
+  &.section-background {
+    &::after {
+      top: -190px;
+      @media (max-width: 1200px) {
+        top: -69px;
+        display: flex;
+        width: 372px;
+        height: 542px;
+        background-image: url('../img/section-background/bg1200.svg');
+      }
+      @media (max-width: 400px) {
+        top: -25px;
+        width: 100%;
+        background-image: url('../img/section-background/bg1000.svg');
+        background-size: cover;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    @media (max-width: 1200px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+    }
+    @media (max-width: 1000px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+}

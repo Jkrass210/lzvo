@@ -1,0 +1,29 @@
+.box-linst-photo-gallery {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    @media (max-width: 1200px) {
+      gap: 24px;
+    }
+  }
+  .tag {
+    font-size: 16px;
+    background-color: var(--black-5, #232323);
+    @media (max-width: 1000px) {
+      font-size: 14px;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.box-press {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 112px;
+    @media (max-width: 1200px) {
+      gap: 92px;
+    }
+    @media (max-width: 1000px) {
+      gap: 76px;
+    }
+  }
+}

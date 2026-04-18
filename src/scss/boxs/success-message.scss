@@ -1,0 +1,43 @@
+.success-message {
+  &__window {
+    padding: 32px;
+    max-width: 100%;
+    width: 468px;
+    border-radius: 20px;
+    background-color: var(--black-20, #141414);
+    @media (max-width: 1000px) {
+      padding: 28px 20px 20px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    @media (max-width: 1000px) {
+      gap: 24px;
+    }
+  }
+  &__title {
+    margin: 0 auto;
+    color: var(--white, #FFF);
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @media (max-width: 1000px) {
+      max-width: 70%;
+      font-size: 20px;
+    }
+  }
+  &__desc {
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media (max-width: 1000px) {
+      font-size: 16px;
+    }
+  }
+}

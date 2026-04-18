@@ -1,0 +1,20 @@
+.section-title {
+  display: flex;
+  margin-bottom: 28px;
+  @media (max-width: 1200px) {
+    margin-bottom: 24px;
+  }
+  .title {
+    color: var(--white, #FFF);
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @media (max-width: 1200px) {
+      font-size: 32px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 28px;
+    }
+  }
+}

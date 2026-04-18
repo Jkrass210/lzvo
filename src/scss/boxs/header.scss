@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  padding-top: 36px;
+  z-index: 5;
+  @media (max-width: 1300px) {
+    padding-top: 20px;
+  }
+  
+  &__line {
+    position: relative;
+    padding: 22px 32px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: 20px;
+      backdrop-filter: blur(28.304000854492188px);
+      background: rgba(19, 19, 19, 0.60);
+    }
+    @media (max-width: 1200px) {
+      padding: 14px 24px;
+    }
+    @media (max-width: 1000px) {
+      padding: 12px;
+    }
+  }
+}

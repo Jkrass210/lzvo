@@ -1,0 +1,10 @@
+.swiper-container {
+  overflow: hidden;
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+    article {
+      height: 100%;
+    }
+  }
+}

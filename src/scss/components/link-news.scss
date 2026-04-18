@@ -1,0 +1,37 @@
+.link-news {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @media (min-width: 1001px) {
+    &:focus-visible,&:hover {
+      .time {
+        color: var(--green);
+      }
+    }
+  }
+  .time {
+    color: var(--gray-text, #646464);
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    transition: color 0.4s ease-in-out;
+  }
+  .name {
+    color: #FFF;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 131%;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media (max-width: 1000px) {
+      font-size: 17px;
+    }
+  }
+}

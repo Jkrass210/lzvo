@@ -1,0 +1,64 @@
+<header class="header" id="header">
+  <div class="container">
+    <div class="header__line">
+      @@include('./box-logo.html')
+
+      <div class="header-menu">
+        <button class="cloce-modal-type-1 btn-reset">
+          <span class="svg">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <use xlink:href="img/sprite.svg#closeModal"></use>
+            </svg>
+          </span>
+        </button>
+
+        <div class="header-menu__wrapper">
+          <div class="header-menu__line-search">
+            <div class="search-mobile-line">
+              <form>
+                <label class="input-type-search">
+                  <input class="input-type-search__input" type="text" placeholder="Введите запрос">
+                </label>
+              </form>
+            </div>
+          </div>
+          <nav class="header-menu__nav">
+            <ul class="header-menu__list list-reset">
+              <li>
+                <a href="#about" class="link-nav js-scroll-link">
+                  О нас
+                </a>
+              </li>
+              <li>
+                <a href="#about" class="link-nav js-scroll-link">
+                  Описание проекта
+                </a>
+              </li>
+              <li>
+                <a href="career.html" class="link-nav">
+                  Карьера
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-nav">
+                  Пресс-центр
+                </a>
+              </li>
+              <li>
+                <a href="#footer" class="link-nav js-scroll-link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header-right">
+        @@include('./box-search.html')
+        @@include('../components/switcher.html')
+        @@include('../components/burger.html')
+      </div>
+    </div>
+  </div>
+</header>

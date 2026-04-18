@@ -1,0 +1,32 @@
+.card-about {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  @media (max-width: 1200px) {
+    padding: 24px;
+    background-color: var(--black-10, #191919);
+  }
+  &__title {
+    color: #FFF;
+    font-family: var(--font-family);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @media (max-width: 1200px) {
+      font-size: 20px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 18px;
+    }
+  }
+  &__desc {
+    color: #FFF;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+}

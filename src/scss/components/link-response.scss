@@ -1,0 +1,25 @@
+.link-response {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 24px;
+  height: 60px;
+  width: 100%;
+  color: #FFF;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133.333%;
+  background-color: var(--green);
+  border-radius: 14px;
+  @media (min-width: 1001px) {
+    &:focus-visible,&:hover {
+      background-color: #02b95a;
+    }
+  }
+  @media (max-width: 1000px) {
+    height: 52px;
+    font-size: 17px;
+  }
+}

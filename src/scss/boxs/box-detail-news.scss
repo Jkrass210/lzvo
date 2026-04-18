@@ -1,0 +1,33 @@
+.box-detail-news {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: calc(1017 / 1364 * 100%) calc(323 / 1364 * 100%);
+    column-gap: 24px;
+    row-gap: 56px;
+    @media (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    &_top {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      @media (max-width: 1200px) {
+        gap: 24px;
+      }
+      @media (max-width: 1000px) {
+        gap: 20px;
+      }
+    }
+    &_bottom {
+      grid-area: 1 / 2 / 3 /3;
+      @media (max-width: 1200px) {
+        padding-top: 44px;
+      }
+      @media (max-width: 1000px) {
+        padding-top: 16px;
+      }
+    }
+  }
+}

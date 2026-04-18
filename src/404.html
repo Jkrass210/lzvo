@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html',{"title":"404"})
+
+<body>
+  @@include('html/boxs/preloader.html')
+  @@include('html/boxs/header.html')
+  <main class="main">
+    <div class="section-error">
+      <div class="container">
+        <div class="section-error__content">
+          <img src="img/404/404.png" alt="404">
+          <p>Запрашиваемая страница<br>не найдена или удалена</p>
+          <a href="/" class="section-error__link">
+            <span class="text">Открыть главную</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include('html/boxs/footer.html')
+  @@include('html/boxs/modals.html')
+  @@include('html/components/cookie.html')
+</body>
+
+</html>

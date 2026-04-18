@@ -1,0 +1,54 @@
+.section-banner-top {
+  &__container {
+    position: relative;
+    padding: 71px 52px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--black-10, #191919);
+    @media (max-width: 1200px) {
+      padding: 56px 36px;
+    }
+    @media (max-width: 1000px) {
+      padding: 48px 28px;
+    }
+    &::after,&::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 201px;
+      pointer-events: none;
+    }
+
+    &::after {
+      background: linear-gradient(270deg, rgba(25, 25, 25, 0.00) 0%, #191919 100%);
+    }
+
+    &::before {
+      background-image: url('../img/section-about/bg.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+    color: #FFF;
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 899px;
+    @media (max-width: 1200px) {
+      font-size: 28px;
+      max-width: 636px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 20px;
+      max-width: 100%;
+    }
+  }
+}

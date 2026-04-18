@@ -1,0 +1,66 @@
+<section class="box-contacts">
+  <div class="container">
+    <div class="box-contacts__content">
+      <div class="box-contacts__content_left">
+        <div class="contacts-list">
+          <div class="box-info">
+            <span class="name">Адрес</span>
+            <span class="text">398010, Липецкая область, м.р-н Грязинский, г.п. город Грязи, г. Грязи, тёр. ОЭЗ ППТ
+              Липецк, стр. 4А, офис 021/56</span>
+          </div>
+
+          <div class="box-info">
+            <span class="name">Телефон</span>
+            <a href="tel:+7 926 405-44-54" class="phone">+7 926 405-44-54</a>
+          </div>
+
+          <div class="box-info">
+            <span class="name">Эл. адрес</span>
+            <a href="mailto:Info@lzvo.pro" class="mail">Info@lzvo.pro</a>
+          </div>
+        </div>
+
+        <button class="btn-requisites btn-reset">
+          <span class="svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <use xlink:href="img/sprite.svg#requisites"></use>
+            </svg>
+          </span>
+          <span class="text">
+            Открыть реквизиты
+          </span>
+        </button>
+      </div>
+      <div class="box-contacts__content_right">
+        <div class="map-contacts" id="map-contacts"></div>
+        <script>
+          ymaps.ready(init);
+
+          function init() {
+            const map = new ymaps.Map("map-contacts", {
+              center: [52.496191, 39.955330],
+              zoom: 15,
+              controls: [] // Отключаем все элементы управления
+            });
+
+            const placemark = new ymaps.Placemark(
+              [52.496191, 39.955330],
+              {
+                hintContent: "Моя метка",
+                balloonContent: "Описание"
+              },
+              {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/box-contacts/1.svg',
+                iconImageSize: [42, 50],
+                iconImageOffset: [-10, -20]
+              }
+            );
+
+            map.geoObjects.add(placemark);
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</section>

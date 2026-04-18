@@ -1,0 +1,58 @@
+.burger {
+  display: none;
+  @media (max-width: 1200px) {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: var(--green);
+    border-radius: 14px;
+    color: var(--main-white, #FFF);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: background-color 0.4s ease-in-out;
+    @media (max-width: 1000px) {
+      border-radius: 8px;
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      &.active {
+        background-color: var(--gray-500, #232323);
+        .svg-burger {
+          opacity: 0;
+        }
+        .svg-close {
+          opacity: 1;
+        }
+      }
+    }
+    .svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+      width: 20px;
+      &-burger {
+        position: absolute;
+        transition: opacity 0.4s ease-in-out;
+      }
+      &-close {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    padding: 6px;
+    .text {
+      display: none;
+    }
+  }
+}

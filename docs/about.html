@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас</title>
+  <link href="css/normalize.min.css?_v=20260408161102" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260408161102" rel="stylesheet">
+  <link href="css/style.css?_v=20260408161102" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20260408161102"></script>
+  
+  <script src="js/jquery-3.7.1.min.js?_v=20260408161102" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20260408161102" defer></script>
+  <script src="js/jquery.inputmask.min.js?_v=20260408161102" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20260408161102" defer></script>
+  <script src="js/fslightbox.js?_v=20260408161102" defer></script>
+  <script type="module" src="js/main.js?_v=20260408161102"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header" id="header">
+  <div class="container">
+    <div class="header__line">
+      <div class="box-logo">
+  <a href="/" class="box-logo__link">
+    <img src="img/logo/logo-header/logo.svg" alt="svg">
+  </a> 
+</div>
+
+      <div class="header-menu">
+        <button class="cloce-modal-type-1 btn-reset">
+          <span class="svg">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <use xlink:href="img/sprite.svg#closeModal"></use>
+            </svg>
+          </span>
+        </button>
+
+        <div class="header-menu__wrapper">
+          <div class="header-menu__line-search">
+            <div class="search-mobile-line">
+              <form>
+                <label class="input-type-search">
+                  <input class="input-type-search__input" type="text" placeholder="Введите запрос">
+                </label>
+              </form>
+            </div>
+          </div>
+          <nav class="header-menu__nav">
+            <ul class="header-menu__list list-reset">
+              <li>
+                <a href="#about" class="link-nav js-scroll-link">
+                  О нас
+                </a>
+              </li>
+              <li>
+                <a href="#about" class="link-nav js-scroll-link">
+                  Описание проекта
+                </a>
+              </li>
+              <li>
+                <a href="career.html" class="link-nav">
+                  Карьера
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-nav">
+                  Пресс-центр
+                </a>
+              </li>
+              <li>
+                <a href="#footer" class="link-nav js-scroll-link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="box-search">
+  <button class="box-search__btn btn-reset js-open-modal" data-modal="modal-search">
+    <span class="svg">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+        <use xlink:href="img/sprite.svg#search"></use>
+      </svg>
+    </span>
+    <span class="text">
+      Поиск
+    </span>
+  </button>
+</div>
+        <div class="switcher">
+  <div class="switcher__label">
+    <span class="switcher__status">
+      <a href="#" class="active">Ru</a><!--при добавлении класса active ссылка активкна-->
+      <a href="#" >En</a>
+    </span>
+  </div>
+</div>
+        <button class="burger btn-reset" id="burger">
+  <span class="text">
+    Меню
+  </span>
+  <span class="svg">
+    <svg class="svg-burger" width="10" height="10" viewBox="0 0 10 10" fill="none">
+      <use xlink:href="img/sprite.svg#burger"></use>
+    </svg>
+    <svg class="svg-close" width="10" height="10" viewBox="0 0 10 10" fill="none">
+      <use xlink:href="img/sprite.svg#closeModal"></use>
+    </svg>
+  </span>
+</button>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <div class="bx-breadcrumb">
+  <div class="container">
+    <div class="bx-breadcrumb__list">
+      <div class="bx-breadcrumb-item">
+        <a href="/">
+          <span>Главная страница</span>
+        </a>
+      </div>
+      <div class="bx-breadcrumb-item">
+        <span>О нас</span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="page-title">
+  <div class="container">
+    <div class="page-title__line">
+      <h1 class="page-title__name">О нас</h1>
+    </div>
+  </div>
+</div>
+    <section class="section-banner-top">
+  <div class="container">
+    <div class="section-banner-top__container">
+      <div class="section-banner-top__content">
+        <p>Строительство современного завода по производству КРУЭ 110 500 кВ и высоковольтного оборудования</p>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="box-text mt-144">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="title">Основная информация</h2>
+    </div>
+    <div class="static-p-ul">
+      <p>Инвестиционный проект: строительство современного завода по производству комплектных распределительных
+        устройств элегазовых (КРУЭ)110–500 кВ и высоковольтного оборудования</p>
+      <p>Основные направления деятельности:</p>
+      <ul>
+        <li>
+          Производство электрооборудования и реализация комплексных проектов энергоснабжения объектов генерации и
+          электрических сетей
+        </li>
+        <li>
+          Производство КРУЭ 110-500 кВ на базе компонентов собственного производства: выключателей, разъединителей,
+          заземлителей и быстродействующих заземлителей, шкафов управления, металлоконструкций, а также
+          измерительных трансформаторов тока и напряжения, корпусов модулей КРУЭ
+        </li>
+        <li>
+          Оказание сопутствующих сервисных услуг
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="section-about section-background mt-144">
+  <div class="container">
+    <div class="section-about__content">
+      <div class="section-about__top">
+        <article class="card-about">
+          <h3 class="card-about__title">Миссия и ценности</h3>
+          <p class="card-about__desc">
+            Отношения без ценностных опор не имеют смысла. Каждый день мы полагаемся на ценности которые определяют наши действия и взаимоотношения со всеми участниками процессов.
+          </p>
+        </article>
+      </div>
+      <div class="section-about__bottom">
+        <ul class="section-about__list list-reset">
+          <li>
+            <article class="card-about">
+              <h3 class="card-about__title">Обеспечение технологического суверенитета</h3>
+              <p class="card-about__desc">
+                Группа располагает собственными экспертными компетенциями в самой высокотехнологичной и передовой отрасли, а значит, обеспечивает рынок не только продуктами, но и интеллектуальными ресурсами для полной технологической независимости.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card-about">
+              <h3 class="card-about__title">Ориентированность <br>на результат</h3>
+              <p class="card-about__desc">
+                В центре нашего движения — большая цель. Каждый член команды мотивирован — он всегда может ответить, зачем мы делаем то, что делаем. Мы не разбрасываемся амбициозными лозунгами, мы шаг за шагом приближаемся к реальным достижениям, которыми гордимся сами. День за днём, от малых точечных изменений — к глобальным свершениям.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card-about">
+              <h3 class="card-about__title">Устойчивость <br>и гибкость</h3>
+              <p class="card-about__desc">
+                Принимая повседневные бизнес-решения, мы учитываем краткосрочное и долгосрочное воздействие на материальные и нематериальные ресурсы регионов, страны и планеты. Мы учитываем потребности современности и предвосхищаем потребности будущих поколений, действуя добросовестно и обдуманно.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card-about">
+              <h3 class="card-about__title">Честность <br>и открытость</h3>
+              <p class="card-about__desc">
+                Отношения, построенные на непоколебимой честности, — залог успеха и прогресса в долгосрочной перспективе. Мы серьёзно относимся ко всем обязательствам внутри и за пределами Группы.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card-about">
+              <h3 class="card-about__title">Дух <br>новаторства</h3>
+              <p class="card-about__desc">
+                Представьте мир без изменений — никакого риска, никакого поиска. Мир, в котором нет места прогрессу и совершенствованию. Каждый день мы ищем пути, которые позволят сделать лучше, эффективнее, больше. Каждый день мы делаем шаг в неизвестное, потому что именно там — энергия.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card-about">
+              <h3 class="card-about__title">Безопасность <br>и надежность</h3>
+              <p class="card-about__desc">
+                Здесь нет мелочей и компромиссов. Полная безопасность сотрудников и среды присутствия — наш главный приоритет. Она также является важным критерием при выборе деловых и отраслевых партнёров.
+              </p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+    <div class="quote mt-144">
+  <div class="container">
+    <article class="card-quote">
+      <div class="card-quote__top">
+        <p>
+          Сегодня мы закладываем не просто камень, а основу для будущего отечественного производства КРУЭ. Для нас,
+          команды «ЛЗВО», это большая ответственность и возможность внести весомый вклад в развитие российской
+          энергетики. Мы настроены на активную работу, создание качественной продукции и развитие компетенций наших
+          сотрудников
+        </p>
+      </div>
+      <div class="card-quote__bottom">
+        <div class="box-person">
+          <span class="profession">Генеральный директор</span>
+          <h3 class="box-person__title">Перепеченова Анна Валерьевна</h3>
+        </div>
+      </div>
+      <picture><source srcset="img/card-quote/person.webp" type="image/webp"><img src="img/card-quote/person.png" alt="person"></picture>
+    </article>
+  </div>
+</div>
+  </main>
+  <footer class="footer mt-156" data-id="footer">
+  <div class="container footer_container">
+    <div class="footer__top">
+      <div class="box-logo-footer">
+  <a href="/" class="box-logo-footer__link">
+    <img src="img/logo/logo-footer/logo.svg" alt="img">
+  </a>
+</div>
+      <div class="footer__box-nav">
+        <nav class="footer__nav">
+          <ul class="footer__list list-reset">
+            <li>
+              <a href="#" class="link-nav">
+                О нас
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                Описание проекта
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                Карьера
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                Пресс-центр
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="left">
+        <p><span>© 2025</span>Все права защищены</p>
+        <a href="#">Политика обработки персональных данных</a>
+      </div>
+      <div class="right">
+        <a href="https://x2digital.ru/">
+          <img src="img/x2/x2.svg" alt="x2">
+        </a>
+      </div>
+    </div>
+    <div class="footer__quote">
+      <p>Энергия<br>общей<br>цели</p>
+    </div>
+  </div>
+</footer>
+  <div class="modal" id="viewer-video">
+  <div class="modal__body">
+    <button class="viewer__close btn-reset js-close-modal">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <use xlink:href="img/sprite.svg#viewerClose"></use>
+      </svg>
+    </button>
+    <div class="viewer-video__window js-box-video-iframe">
+      <iframe src="" width="100%" height="100%" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-search">
+  <div class="modal__body">
+    <button class="viewer__close btn-reset js-close-modal">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <use xlink:href="img/sprite.svg#viewerClose"></use>
+      </svg>
+    </button>
+    <div class="modal-search__window">
+      <form>
+        <div class="modal-search__line">
+          <label class="input-type-search">
+            <input class="input-type-search__input" type="text">
+          </label>
+          <button class="submit-type-search btn-reset">
+            <span class="text">
+              Найти
+            </span>
+            <span class="svg">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <use xlink:href="img/sprite.svg#btnSearch"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="resp-vac">
+  <div class="modal__body">
+    <button class="modal__close btn-reset js-close-modal">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <use xlink:href="img/sprite.svg#viewerClose"></use>
+      </svg>
+    </button>
+    <div class="resp-vac__window">
+      <form class="js-form">
+        <div class="form-type-1">
+          <h4 class="form-type-1__title">Отклик на вакансию</h4>
+          <div class="form-type-1__group-input">
+            <label class="input-type-1">
+              <input class="input-type-1__input required" type="text" placeholder="Ваше имя">
+              <span class="message-error">Это поле не может быть пустым</span>
+            </label>
+            <label class="input-type-1">
+              <input class="input-type-1__input required js-phone-mask required-phone" type="text" placeholder="Ваш телефон">
+              <span class="message-error">Это поле не может быть пустым</span>
+            </label>
+            <label class="textarea-type-1">
+              <textarea class="textarea-type-1__text" placeholder="Комментарий"></textarea>
+              <span class="message-error">Это поле не может быть пустым</span>
+            </label>
+          </div>
+          <div class="input-file">
+            <label class="input-file__label">
+              <input class="input-file__input js-file" type="file" multiple>
+              <span class="text">Загрузить резюме</span>
+              <span class="svg">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none">
+                  <use xlink:href="img/sprite.svg#inputFile"></use>
+                </svg>
+              </span>
+            </label>
+            <span class="input-file__wrapp">
+              <span class="input-file__info">Допустимые форматы:&nbsp;doc, docx, pdf</span>
+              <span class="input-file__info">Допустимый размер: не более&nbsp;5 MB</span>
+            </span>
+          </div>
+          <div class="form-type-1__group-btn">
+            <button class="form-type-1__submit btn-reset" type="submit">
+              <span class="text">Отправить резюме</span>
+            </button>
+
+            <label class="checkbox-type-1">
+              <input class="checkbox-type-1__input required required-checkbox" checked type="checkbox">
+              <span class="castom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                  <path d="M9.69922 0.700012L3.39922 8.20001L0.699219 5.20001" stroke="#00CB62" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="checkbox-type-1__desc">
+                Нажимая отправить вы даёте согласие с <a href="#">политикой обработки персональных данных</a>
+              </span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="success-message__window none">
+      <div class="success-message__wrapper">
+        <h4 class="success-message__title">Ваше сообщение отправлено</h4>
+        <p class="success-message__desc">Спасибо за ваш отклик, мы скоро с вами свяжемся!</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="cookie">
+  <div class="container cookie__container">
+    <div class="cookie__window">
+      <div class="cookie__message">
+        <p class="desc">
+          Оставаясь на сайте вы соглашаетесь с <a href="#">Политикой обработки персональных</a> данных и с использованием cookie.
+        </p>
+      </div>
+      <div class="cookie__box-btn">
+        <button class="cookie__btn btn-reset">
+          <span class="text">Понятно</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

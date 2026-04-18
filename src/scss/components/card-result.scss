@@ -1,0 +1,59 @@
+.card-result {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__link {
+    position: absolute;
+    inset: 0;
+
+    .text {
+      display: none;
+    }
+    @media (min-width: 1001px) {
+      &:focus-visible,&:hover {
+        & + .name {
+          color: var(--green);
+        }
+      }
+    }
+  }
+
+  .name {
+    color: var(--white, #FFF);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    transition: color 0.4s ease-in-out;
+    @media (max-width: 1000px) {
+      font-size: 16px;
+    }
+  }
+
+  .path {
+    max-width: 100%;
+    color: var(--gray-text, #646464);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    i {
+      font-style: normal;
+      white-space: nowrap;
+      &:not(:first-child) {
+        flex-shrink: 1;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &::before {
+          content: "-";
+          margin: 0 4px 0 0;
+        }
+      }
+    }
+  }
+}

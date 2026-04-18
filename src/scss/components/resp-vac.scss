@@ -1,0 +1,12 @@
+.resp-vac {
+  &__window {
+    padding: 32px;
+    max-width: 100%;
+    width: 468px;
+    border-radius: 20px;
+    background-color: var(--black-20, #141414);
+    @media (max-width: 1000px) {
+      padding: 28px 20px 20px;
+    }
+  }
+}

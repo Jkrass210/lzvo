@@ -1,0 +1,56 @@
+.checkbox-type-1 {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  cursor: pointer;
+  &__input {
+    cursor: pointer;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    &.error {
+      & + .castom {
+        border-color: #FF2C2C;
+      }
+    }
+    &:checked + .castom {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+  .castom {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #232323;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background-color: #232323;
+    svg {
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
+  }
+  &__desc {
+    color: var(--gray-text, #646464);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    a {
+      position: relative;
+      z-index: 2;
+      color: var(--green);
+      text-decoration: underline;
+      @media (min-width: 1001px) {
+        &:focus-visible,&:hover {
+          color: var(--gray-text);
+        }
+      }
+    }
+  }
+}

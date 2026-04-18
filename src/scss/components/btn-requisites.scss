@@ -1,0 +1,31 @@
+.btn-requisites {
+  width: 276px;
+  max-width: 100%;
+  padding: 5px 12px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133.333%;
+  gap: 8px;
+  border-radius: 16px;
+  background-color: var(--black-10, #191919);
+  transition: background-color 0.4s ease-in-out;
+  .svg {
+    display: flex;
+  }
+  @media (min-width: 1001px) {
+    &:focus-visible,&:hover {
+      background-color: var(--green);
+    }
+  }
+  @media (max-width: 1000px) {
+    width: 100%;
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,30 @@
+.box-search {
+  display: flex;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--white, #FFF);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 141.176%;
+    transition: color 0.4s ease-in-out;
+    .svg {
+      display: flex;
+      color: var(--green);
+      transition: color 0.4s ease-in-out;
+    }
+    @media (min-width: 1201px) {
+      &:focus-visible,&:hover {
+        color: var(--green);
+        .svg {
+          color: var(--white, #FFF);
+        }
+      }
+    }
+  }
+}

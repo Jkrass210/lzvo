@@ -1,0 +1,106 @@
+.box-about {
+  position: relative;
+  display: flex;
+  padding-right: calc(694 / 1364 * 100%);
+  @media (max-width: 1200px) {
+    padding-right: calc(498 / 976 * 100%);
+    padding-bottom: 96px;
+  }
+  @media (max-width: 1000px) {
+    padding-top: 306px;
+    padding-right: 0;
+    padding-bottom: 0;
+    .section-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      .title {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  &__box-img {
+    //width: calc(1094 / 1364 * 100%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    bottom: 104px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 0 20px 20px 0;
+    @media (max-width: 1200px) {
+      border-radius: 0;
+      margin: 0 -24px;
+      bottom: 96px;
+    }
+    @media (max-width: 1000px) {
+      border-radius: 0 20px 20px 0;
+      margin: 0 -16px;
+      width: calc(100% + 32px);
+      height: 204px;
+      top: 58px;
+      right: 0;
+      left: 0;
+    }
+
+    /*&::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 0px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 50px solid var(--black-20);
+    }*/
+
+    picture {
+      justify-content: end;
+      @media (max-width: 1000px) {
+        justify-content: center;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      width: 1094px;
+      height: 100%;
+      object-fit: cover;
+      @media (max-width: 1200px) {
+        width: 911px;
+      }
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__line-btn {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @media (max-width: 1200px) {
+      position: absolute;
+      padding-top: 32px;
+      width: 100%;
+    }
+    @media (max-width: 1000px) {
+      padding-top: 28px;
+      position: static;
+      flex-direction: column;
+    }
+  }
+
+}

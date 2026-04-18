@@ -1,0 +1,23 @@
+.swiper-viewer {
+  &__line-nav {
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-pagination {
+    width: fit-content;
+    padding: 14px 16px;
+    border-radius: 14px;
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    background-color: var(--black-5, #232323);
+    @media (max-width: 1000px) {
+      font-size: 15px;
+    }
+  }
+}

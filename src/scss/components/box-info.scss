@@ -1,0 +1,27 @@
+.box-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  .name {
+    color: var(--gray-text, #646464);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    @media (max-width: 1000px) {
+      font-size: 15px;
+    }
+  }
+  .info {
+    color: var(--white, #FFF);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    @media (max-width: 1000px) {
+      font-size: 17px;
+    }
+  }
+}

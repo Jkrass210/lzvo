@@ -1,0 +1,40 @@
+.link-nav {
+  position: relative;
+  color: var(--White, #FFF);
+  font-family: var(--font-family);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.176%;
+
+  @media (max-width: 1000px) {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 1px;
+    background-color: #00C974;
+    opacity: 0;
+    transition: width 600ms ease;
+    width: 0;
+  }
+
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+
+  @media (min-width: 1201px) {
+    &:focus-visible, &:hover {
+      &::before {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
+}

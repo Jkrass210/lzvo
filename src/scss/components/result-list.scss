@@ -1,0 +1,35 @@
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  li {
+    padding: 24px 20px;
+    border-radius: 16px;
+    background-color: var(--black-5, #232323);
+    position: relative;
+    counter-increment: item;
+    display: flex;
+    gap: 12px;
+    @media (max-width: 1000px) {
+      padding: 16px;
+      flex-direction: column;
+    }
+    &::before {
+      content: counter(item);
+      text-align: end;
+      max-width: fit-content;
+      min-width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      border-radius: 12px;
+      background-color: var(--black-10, #191919);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.swiper-btn-type-1 {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: var(--white);
+  background-color: var(--black-5, #232323);
+  transition: opacity 0.4s ease-in-out;
+  @media (max-width: 1000px) {
+    width: 48px;
+    height: 48px;
+  }
+  @media (min-width: 1201px) {
+    &:focus-visible,&:hover {
+      background-color: var(--green);
+    }
+  }
+  &.swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
